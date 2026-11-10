@@ -1,0 +1,38 @@
+:root{--mar:#641E2B;--gold:#C6A15B;--ivo:#FFF8EB;--grn:#435C43;--brn:#38251F;--ros:#B77A7A}
+*{box-sizing:border-box;margin:0}html{scroll-behavior:smooth}
+body{font:300 17px/1.7 Jost,'Noto Sans Tamil',sans-serif;background:var(--ivo);color:var(--brn);overflow-x:hidden;text-align:center}
+body.lock{overflow:hidden}[hidden]{display:none!important}
+h1,h2,h3,.names{font:600 clamp(2rem,8vw,3.6rem)/1.15 'Cormorant Garamond','Noto Sans Tamil',serif;color:var(--mar)}
+h3{font-size:2rem;margin-bottom:1rem}h3::after{content:"❖";display:block;color:var(--gold);font-size:1rem;margin:.4rem 0}
+section{padding:4rem 1.4rem;max-width:760px;margin:auto}p{margin:.5rem 0}.it{font-style:italic}.gold{color:var(--gold);font-weight:400}
+.hero{max-width:none;min-height:100svh;display:flex;flex-direction:column;justify-content:center;color:#fff;position:relative;overflow:hidden;
+background:linear-gradient(#641E2Bb3,#38251Fcc),var(--hero,none) center/cover,var(--mar)}.hero h2{color:#fff;font-size:clamp(2.6rem,12vw,5.5rem);letter-spacing:.08em}
+.guest{font-size:1.1rem}.bar{position:fixed;top:.6rem;right:.6rem;z-index:50;display:flex;gap:.4rem}
+.pill{min-width:44px;height:44px;border-radius:22px;border:1px solid var(--gold);background:#fff8ebe6;color:var(--mar);font:inherit;cursor:pointer;padding:0 .8rem}.pill.on{background:var(--mar);color:var(--gold);animation:pul 1.4s infinite}
+.btn{background:var(--mar);color:var(--ivo);border:1px solid var(--gold);padding:.8rem 1.6rem;font:inherit;cursor:pointer;margin:.4rem;text-decoration:none;display:inline-block;min-height:44px;transition:background .3s,color .3s}.btn:hover{background:var(--gold);color:var(--brn)}
+.link{background:none;border:0;color:var(--ros);text-decoration:underline;font:inherit;cursor:pointer;margin:.6rem;min-height:44px}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+#intro{position:fixed;inset:0;z-index:100;background:var(--ivo);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4rem;padding:1rem;border:10px double var(--gold);transition:opacity 1s}#intro.out{opacity:0;pointer-events:none}
+.env{position:relative;width:min(78vw,320px);aspect-ratio:4/3;background:var(--mar);border:2px solid var(--gold);margin:1.6rem 0 1rem;perspective:600px}
+.card{position:absolute;inset:8%;background:var(--ivo);border:1px solid var(--gold);display:grid;place-items:center;z-index:1;transition:transform 1.2s .7s;font-size:.9rem}.card .names{font-size:1.3rem}
+.flap{position:absolute;top:0;left:0;right:0;height:58%;background:#7a2a3a;clip-path:polygon(0 0,100% 0,50% 100%);transform-origin:top;transition:transform .9s;z-index:2}
+.env.open .flap{transform:rotateX(180deg);z-index:0}.env.open .card{transform:translateY(-55%) scale(1.15)}
+.petals{position:absolute;inset:0;pointer-events:none;overflow:hidden}.petals i{position:absolute;top:-20px;width:10px;height:14px;background:#fff;border-radius:60% 0;opacity:.8;animation:fall linear infinite}
+@keyframes fall{to{transform:translate(40px,105vh) rotate(300deg)}}@keyframes pul{50%{box-shadow:0 0 0 6px #C6A15B55}}
+.cdw{background:var(--mar);max-width:none;color:var(--ivo)}#cd{display:flex;justify-content:center;gap:1rem;margin-top:.6rem}
+#cd div{min-width:64px}#cd b{display:block;font:600 2.4rem 'Cormorant Garamond',serif;color:var(--gold)}#cd small{font-size:.75rem}
+.rv{opacity:0;transform:translateY(24px);transition:all .9s}.rv.in{opacity:1;transform:none}
+section:has(#sc){position:relative;height:260px;padding:0;margin:3rem auto;width:min(92%,420px);border:6px double var(--gold);overflow:hidden}
+#sc,.reveal{position:absolute;inset:0;width:100%;height:100%;touch-action:none;cursor:crosshair;transition:opacity 1s}#sc.gone{opacity:0;pointer-events:none}
+.reveal{display:grid;place-items:center;padding:1rem;font:600 1.6rem 'Cormorant Garamond','Noto Sans Tamil',serif;color:var(--mar)}
+.ev{border-left:2px solid var(--gold);margin:0 0 2rem 1rem;padding-left:1.4rem;text-align:left;position:relative}.ev::before{content:"";position:absolute;left:-7px;top:6px;width:12px;height:12px;background:var(--mar);border:2px solid var(--gold);transform:rotate(45deg)}
+.ev h4{font:600 1.5rem 'Cormorant Garamond','Noto Sans Tamil',serif;color:var(--mar)}.ev iframe{width:100%;height:220px;border:0;margin-top:.6rem}
+#grid{columns:2;gap:.6rem}#grid img{width:100%;margin-bottom:.6rem;display:block;cursor:zoom-in;user-select:none;-webkit-user-drag:none;border:1px solid var(--gold)}
+#lb{position:fixed;inset:0;background:#000e;z-index:200;display:flex;align-items:center;justify-content:center}#lb img{max-width:92vw;max-height:88vh;user-select:none}
+#lb button{position:absolute;background:none;border:0;color:#fff;font-size:2.6rem;cursor:pointer;min-width:48px;min-height:48px}#lx{top:8px;right:8px}#lp{left:4px}#ln{right:4px}
+.rsvp{display:grid;gap:.6rem;margin-top:1rem}input,select,textarea{font:inherit;padding:.7rem;border:1px solid var(--gold);background:#fff;color:var(--brn)}
+.row{display:flex;flex-wrap:wrap;justify-content:center}#qr{display:flex;justify-content:center;margin:1rem}
+.fin{padding-bottom:6rem}#toast{position:fixed;bottom:1.4rem;left:50%;transform:translate(-50%,80px);background:var(--mar);color:var(--ivo);padding:.6rem 1.2rem;transition:transform .4s;z-index:300}#toast.show{transform:translate(-50%,0)}
+.conf{position:fixed;top:-10px;width:8px;height:12px;z-index:150;animation:fall 2.4s ease-in forwards}
+@media(min-width:768px){#grid{columns:3}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition-duration:.01s!important}.rv{opacity:1;transform:none}}
